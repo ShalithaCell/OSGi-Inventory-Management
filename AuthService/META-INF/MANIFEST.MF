@@ -1,0 +1,15 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: AuthService
+Bundle-SymbolicName: com.june_we_04.osgi.AuthService
+Bundle-Version: 1.0.0.qualifier
+Bundle-Activator: com.june_we_04.osgi.authservice.Activator
+Bundle-Vendor: JUNE_WE_04
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Automatic-Module-Name: com.june.we.04.osgi.AuthService
+Import-Package: org.osgi.framework;version="1.3.0"
+Bundle-ActivationPolicy: lazy
+Export-Package: com.june_we_04.osgi.authservice,
+ com.june_we_04.osgi.authservice.application,
+ com.june_we_04.osgi.authservice.interfaces,
+ com.june_we_04.osgi.authservice.model

@@ -1,0 +1,15 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: StoreService
+Bundle-SymbolicName: com.june_we_04.osgi.StoreService
+Bundle-Version: 1.0.0.qualifier
+Bundle-Activator: com.june_we_04.osgi.storeservice.StoreActivator
+Bundle-Vendor: JUNE_WE_04
+Bundle-RequiredExecutionEnvironment: JavaSE-11
+Automatic-Module-Name: com.june.we.04.osgi.StoreService
+Import-Package: org.osgi.framework;version="1.3.0"
+Bundle-ActivationPolicy: lazy
+Export-Package: com.june_we_04.osgi.storeservice,
+ com.june_we_04.osgi.storeservice.application,
+ com.june_we_04.osgi.storeservice.interfaces,
+ com.june_we_04.osgi.storeservice.model
