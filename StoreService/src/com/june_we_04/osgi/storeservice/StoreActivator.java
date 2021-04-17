@@ -23,6 +23,13 @@ public class StoreActivator implements BundleActivator {
 		IStoreService storeService = new StoreServiceImpl();
 		
 		serviceRegister = context.registerService(IStoreService.class.getName(), storeService, null);
+		
+		try {
+			
+		}catch (Exception e) {
+			System.out.println("Error Store");
+			System.out.println(e.getLocalizedMessage());
+		}
 	}
 
 	public void stop(BundleContext bundleContext) throws Exception {

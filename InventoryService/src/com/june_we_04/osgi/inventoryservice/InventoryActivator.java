@@ -22,7 +22,12 @@ public class InventoryActivator implements BundleActivator {
 		
 		IItemService itemService = new ItemServiceImpl();
 		
-		serviceRegister = context.registerService(IItemService.class.getName(), itemService, null);
+		try {
+			serviceRegister = context.registerService(IItemService.class.getName(), itemService, null);
+		}catch(Exception ex) {
+			System.out.println("Error Inventory Service");
+			System.out.println(ex.getLocalizedMessage());
+		}
 	}
 
 	public void stop(BundleContext bundleContext) throws Exception {

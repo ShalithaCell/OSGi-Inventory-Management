@@ -22,7 +22,14 @@ public class FinancialServiceActivator implements BundleActivator {
 		
 		IFinancialService financialService = new FinancialServiceImpl();
 		
-		serviceRegister = context.registerService(IFinancialService.class.getName(), financialService, null);
+		try {
+			serviceRegister = context.registerService(IFinancialService.class.getName(), financialService, null);
+		}catch(Exception ex) {
+			System.out.println("Error FI");
+			System.out.println(ex.getLocalizedMessage());
+		}
+		
+		
 	}
 
 	public void stop(BundleContext bundleContext) throws Exception {

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
-	<name>com.june_we_04.osgi.InventoryService</name>
+	<name>com.june_we_04.osgi.InventoryConsumer</name>
 	<comment></comment>
 	<projects>
 	</projects>
@@ -27,7 +27,7 @@
 	</natures>
 	<filteredResources>
 		<filter>
-			<id>1618671342046</id>
+			<id>1618671342038</id>
 			<name></name>
 			<type>30</type>
 			<matcher>
