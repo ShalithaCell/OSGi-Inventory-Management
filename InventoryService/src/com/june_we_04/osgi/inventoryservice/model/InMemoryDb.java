@@ -1,6 +1,7 @@
 package com.june_we_04.osgi.inventoryservice.model;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 
 public class InMemoryDb {
 
@@ -21,5 +22,27 @@ public class InMemoryDb {
   
         return single_instance;
     }
+    
+    public ArrayList<Item> GetInventory(){
+    	return  inventory;
+    }
+    
+    public void ClearData() {
+    	inventory.clear();
+    }
+    
+    public void AddNewItem(Item item) {
+    	inventory.add(item);
+    }
+    
+    public void RemoveStore(int itemID) {
+		Iterator<Item> itr = inventory.iterator();
+        while (itr.hasNext()) {
+        	Item obj = itr.next();
+            if (obj.getItemID() == itemID) {
+                itr.remove();
+            }
+        }
+	}
     
 }

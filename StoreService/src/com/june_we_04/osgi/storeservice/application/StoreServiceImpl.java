@@ -7,11 +7,11 @@ import com.june_we_04.osgi.storeservice.interfaces.ISystemWorker;
 import com.june_we_04.osgi.storeservice.model.InMemoryDb;
 import com.june_we_04.osgi.storeservice.model.Store;
 
-public class StoreService implements IStoreService{
+public class StoreServiceImpl implements IStoreService{
 	
 	private ISystemWorker worker; 
 	
-	public StoreService() {
+	public StoreServiceImpl() {
 		worker = new SystemWorkerImpl();
 	}
 

@@ -8,12 +8,20 @@ public class Item {
 	private int qty;
 	private double buyPrice;
 	private double sellPrice;
+	private int storeID;
 	
-	public int getInventoryID() {
+	
+	public int getItemID() {
 		return itemID;
 	}
-	public void setInventoryID(int itemID) {
+	public void setItemID(int itemID) {
 		this.itemID = itemID;
+	}
+	public int getStoreID() {
+		return storeID;
+	}
+	public void setStoreID(int storeID) {
+		this.storeID = storeID;
 	}
 	public String getName() {
 		return name;
