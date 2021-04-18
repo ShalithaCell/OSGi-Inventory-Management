@@ -1,0 +1,11 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: ShapeCalService
+Bundle-SymbolicName: ShapeCalService
+Bundle-Version: 1.0.0.qualifier
+Bundle-Activator: shapecalservice.ShapeCalServiceActivator
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Automatic-Module-Name: ShapeCalService
+Import-Package: org.osgi.framework;version="1.3.0"
+Bundle-ActivationPolicy: lazy
+Export-Package: shapecalservice
