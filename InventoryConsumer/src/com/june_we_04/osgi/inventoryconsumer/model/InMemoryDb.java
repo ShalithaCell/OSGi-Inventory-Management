@@ -3,6 +3,7 @@ package com.june_we_04.osgi.inventoryconsumer.model;
 import java.util.ArrayList;
 
 import com.june_we_04.osgi.authservice.model.User;
+import com.june_we_04.osgi.storeservice.model.Store;
 
 public class InMemoryDb {
 	
@@ -12,6 +13,7 @@ public class InMemoryDb {
     private int actionID;
     
     private User user;
+    private Store store;
     
     private InMemoryDb() {
 		super();
@@ -41,5 +43,14 @@ public class InMemoryDb {
 	public void setUser(User user) {
 		this.user = user;
 	}
+
+	public Store getStore() {
+		return store;
+	}
+
+	public void setStore(Store store) {
+		this.store = store;
+	}
+	
 
 }

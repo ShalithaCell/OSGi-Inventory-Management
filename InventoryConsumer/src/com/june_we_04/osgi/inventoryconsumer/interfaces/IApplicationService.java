@@ -8,4 +8,25 @@ public interface IApplicationService {
 	 */
 	public boolean IsAuthenticated();
 	
+	/**
+	 * Handle register store
+	 */
+	public void StoreRegistration();
+	
+	/**
+	 * Show application main menu
+	 */
+	public void ShowMenu();
+	
+	/**
+	 * USer management function
+	 */
+	public void UserManagement();
+	
+	/**
+	 * Store Management function
+	 */
+	public void StoreManagement();
+	
+	
 }

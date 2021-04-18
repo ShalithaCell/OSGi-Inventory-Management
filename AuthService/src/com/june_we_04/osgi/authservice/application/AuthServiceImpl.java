@@ -54,4 +54,48 @@ public class AuthServiceImpl implements IAuthService{
 		return user;
 	}
 
+	@Override
+	public void ResetPassword(int userID, String newPassword) {
+		InMemoryDb dataCollection = InMemoryDb.getInstance();
+		
+		Optional<User> user = dataCollection.GetUsers().stream()
+				.filter(c -> c.getUserID() == userID)
+				.findAny();
+		
+		
+		if(!user.isPresent())
+			return;
+		
+		User userObj = user.get();
+		
+		int index = dataCollection.GetUsers().indexOf(userObj);
+		
+		dataCollection.GetUsers().get(index).setPassword(newPassword);
+	}
+
+	@Override
+	public void ChangeUserName(int userID, String userName) {
+		InMemoryDb dataCollection = InMemoryDb.getInstance();
+		
+		Optional<User> user = dataCollection.GetUsers().stream()
+				.filter(c -> c.getUserID() == userID)
+				.findAny();
+		
+		
+		if(!user.isPresent())
+			return;
+		
+		User userObj = user.get();
+		
+		int index = dataCollection.GetUsers().indexOf(userObj);
+		
+		dataCollection.GetUsers().get(index).setName(userName);
+	}
+
+	@Override
+	public void RemoveUser(int userID) {
+		InMemoryDb dataCollection = InMemoryDb.getInstance();
+		dataCollection.RemoveUser(userID);
+	}
+
 }

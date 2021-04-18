@@ -28,4 +28,24 @@ public interface IAuthService {
 	 * @return
 	 */
 	public Optional<User> GetUser(int userID, String password);
+	
+	/**
+	 * Set new password
+	 * @param userID
+	 * @param newPassword
+	 */
+	public void ResetPassword(int userID, String newPassword);
+	
+	/**
+	 * Change username
+	 * @param userID
+	 * @param userName
+	 */
+	public void ChangeUserName(int userID, String userName);
+	
+	/**
+	 * Remove particular user
+	 * @param userID
+	 */
+	public void RemoveUser(int userID);
 }
