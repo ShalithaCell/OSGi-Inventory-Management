@@ -10,12 +10,12 @@ import com.june_we_04.osgi.inventoryconsumer.model.InMemoryDb;
 import com.june_we_04.osgi.inventoryconsumer.model.ServiceRegister;
 import com.june_we_04.osgi.storeservice.model.Store;
 
-public class StoreManagementService implements IStoreManagementService{
+public class StoreManagementServiceImpl implements IStoreManagementService{
 	
 	private IDisplayService displayService;
 	private Scanner scanner;
 	
-	public StoreManagementService() {
+	public StoreManagementServiceImpl() {
 		displayService =  new DisplayServiceImpl();
 		scanner = new Scanner(System.in);
 	}

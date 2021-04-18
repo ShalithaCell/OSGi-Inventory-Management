@@ -19,4 +19,12 @@ public class ApplicationConst {
 	public static final int MENU_STORE_MANAGEMENT_UPDATE_STORE_NAME = 201;
 	public static final int MENU_STORE_MANAGEMENT_GET_STORE_DETAILS = 202;
 	public static final int MENU_STORE_MANAGEMENT_REMOVE_STORE = 203;
+	
+	public static final int MENU_INVENTORY_MANAGEMENT_NEW_ITEM = 301;
+	public static final int MENU_INVENTORY_MANAGEMENT_UPDATE_ITEM = 302;
+	public static final int MENU_INVENTORY_MANAGEMENT_REMOVE_ITEM = 303;
+	public static final int MENU_INVENTORY_MANAGEMENT_GET_INVENTORY = 304;
+	public static final int MENU_INVENTORY_MANAGEMENT_GET_ITEM = 305;
+	
+	public static final int MENU_FINANCIAL_INFORMATION_SHOW_STATUS= 401;
 }

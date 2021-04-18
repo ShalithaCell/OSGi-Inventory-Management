@@ -2,10 +2,14 @@ package com.june_we_04.osgi.inventoryconsumer.application;
 
 import com.june_we_04.osgi.inventoryconsumer.interfaces.IApplicationService;
 import com.june_we_04.osgi.inventoryconsumer.interfaces.IDisplayService;
+import com.june_we_04.osgi.inventoryconsumer.interfaces.IFinancialInformationService;
+import com.june_we_04.osgi.inventoryconsumer.interfaces.IInventoryManagementService;
 import com.june_we_04.osgi.inventoryconsumer.interfaces.IStoreManagementService;
 import com.june_we_04.osgi.inventoryconsumer.interfaces.IUserManagementService;
 import com.june_we_04.osgi.inventoryconsumer.model.ApplicationConst;
 import com.june_we_04.osgi.inventoryconsumer.model.InMemoryDb;
+
+
 import java.util.Scanner;
 
 public final class ApplicationStartup {
@@ -14,13 +18,17 @@ public final class ApplicationStartup {
 	private IDisplayService displayService;
 	private IUserManagementService userManagementService;
 	private IStoreManagementService storeManagementService;
+	private IInventoryManagementService inventoryManagementService;
+	private IFinancialInformationService financialInformationService;
 	private Scanner scanner;
 	
 	public ApplicationStartup() {
 		applicationService = new ApplicationServiceImpl();
 		displayService =  new DisplayServiceImpl();
 		userManagementService = new UserManagementServiceImpl();
-		storeManagementService = new StoreManagementService();
+		storeManagementService = new StoreManagementServiceImpl();
+		inventoryManagementService = new InventoryManagementServiceImpl();
+		financialInformationService = new FinancialInformationService();
 		scanner = new Scanner(System.in); 
 	}
 	
@@ -127,6 +135,38 @@ public final class ApplicationStartup {
 				
 			case ApplicationConst.MENU_STORE_MANAGEMENT_REMOVE_STORE:
 				storeManagementService.RemoveStore();
+				break;
+				
+			case ApplicationConst.MENU_INVENTORY_MANAGEMENT:
+				applicationService.InventoryManagement();
+				break;
+				
+			case ApplicationConst.MENU_INVENTORY_MANAGEMENT_NEW_ITEM:
+				inventoryManagementService.AddNewItem();
+				break;
+				
+			case ApplicationConst.MENU_INVENTORY_MANAGEMENT_UPDATE_ITEM:
+				inventoryManagementService.UpdateItem();
+				break;
+				
+			case ApplicationConst.MENU_INVENTORY_MANAGEMENT_REMOVE_ITEM:
+				inventoryManagementService.RemoveItem();
+				break;
+				
+			case ApplicationConst.MENU_INVENTORY_MANAGEMENT_GET_INVENTORY:
+				inventoryManagementService.DisplayInventory();
+				break;
+				
+			case ApplicationConst.MENU_INVENTORY_MANAGEMENT_GET_ITEM:
+				inventoryManagementService.GetItemDetails();
+				break;
+				
+			case ApplicationConst.MENU_FINANCIAL_INFORMATION:
+				applicationService.FinantialManagement();
+				break;
+				
+			case ApplicationConst.MENU_FINANCIAL_INFORMATION_SHOW_STATUS:
+				financialInformationService.GetFinancialStatusOfInventory();
 				break;
 				
 			default:

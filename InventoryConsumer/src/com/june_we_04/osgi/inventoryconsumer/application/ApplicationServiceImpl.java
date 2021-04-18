@@ -132,4 +132,34 @@ public class ApplicationServiceImpl implements IApplicationService{
 		InMemoryDb.getInstance().SetActionID(scanner.nextInt());
 	}
 
+	@Override
+	public void InventoryManagement() {
+		
+		displayService.Display("-------------- Inventory Management --------------");
+		displayService.Display(ApplicationConst.MENU_INVENTORY_MANAGEMENT_NEW_ITEM + ". Add New Item");
+		displayService.Display(ApplicationConst.MENU_INVENTORY_MANAGEMENT_UPDATE_ITEM + ". Update Item");
+		displayService.Display(ApplicationConst.MENU_INVENTORY_MANAGEMENT_REMOVE_ITEM + ". Remove Item");
+		displayService.Display(ApplicationConst.MENU_INVENTORY_MANAGEMENT_GET_INVENTORY + ". Show Inventory");
+		displayService.Display(ApplicationConst.MENU_INVENTORY_MANAGEMENT_GET_ITEM + ". Show Item Details");
+		displayService.Display(ApplicationConst.MENU_WIZARD_CODE + ". Return to Main Menu");
+		displayService.Display(ApplicationConst.EXIT_CODE + ". Exit");
+		displayService.DisplayLineBreak();
+		
+		displayService.InLineDisplay("Enter Action ID : ");
+		InMemoryDb.getInstance().SetActionID(scanner.nextInt());
+	}
+
+	@Override
+	public void FinantialManagement() {
+		
+		displayService.Display("-------------- Financial Management --------------");
+		displayService.Display(ApplicationConst.MENU_FINANCIAL_INFORMATION_SHOW_STATUS + ". Show inventory Transaction Status");
+		displayService.Display(ApplicationConst.MENU_WIZARD_CODE + ". Return to Main Menu");
+		displayService.Display(ApplicationConst.EXIT_CODE + ". Exit");
+		displayService.DisplayLineBreak();
+		
+		displayService.InLineDisplay("Enter Action ID : ");
+		InMemoryDb.getInstance().SetActionID(scanner.nextInt());
+	}
+
 }

@@ -28,5 +28,15 @@ public interface IApplicationService {
 	 */
 	public void StoreManagement();
 	
+	/**
+	 * Inventory Management function
+	 */
+	public void InventoryManagement();
+	
+	/**
+	 * Financial information function
+	 */
+	public void FinantialManagement();
+	
 	
 }

@@ -22,7 +22,12 @@ public class Activator implements BundleActivator {
 		
 		IAuthService authService = new AuthServiceImpl();
 		
-		serviceRegister = context.registerService(IAuthService.class.getName(), authService, null);
+		try {
+			serviceRegister = context.registerService(IAuthService.class.getName(), authService, null);
+		}catch (Exception e) {
+			System.out.println("Error in Auth service");
+			System.out.println(e.getLocalizedMessage());
+		}
 	}
 
 	public void stop(BundleContext bundleContext) throws Exception {
