@@ -52,7 +52,7 @@ public class ItemServiceImpl implements IItemService{
 		
 		InMemoryDb dataCollection = InMemoryDb.getInstance();
 		
-		int index = dataCollection.GetInventory().indexOf(oldItem);
+		int index = dataCollection.GetInventory().indexOf(oldItem.get());
 		
 		dataCollection.GetInventory().get(index).setBuyPrice(item.getBuyPrice());
 		dataCollection.GetInventory().get(index).setCategory(item.getCategory());
